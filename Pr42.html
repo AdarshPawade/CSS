@@ -1,0 +1,24 @@
+<html>
+<title>bhaskar's 4th</title>    
+<body>
+
+        <script>
+            function clgID(name, enrollmentNumber) {
+    return {
+        name: name,
+        enrollmentNumber: enrollmentNumber,
+        displayInfo: function() {
+            document.write("Student Name: " + this.name, "<br>") ;
+            
+            document.write("Enrollment Number: " + this.enrollmentNumber);
+        }
+    };
+}
+
+
+let student = clgID("Adarsh Pawade", "2200690309");
+student.displayInfo();
+
+        </script>
+    </body>
+</html>

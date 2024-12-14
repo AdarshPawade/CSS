@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Pawade's Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background: linear-gradient(135deg, #e0e0e0, #607d8b); /* Professional colors */
+            color: #333;
+            padding: 50px 0;
+        }
+
+        /* Main Container for Name and Image */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        /* Image Section */
+        .image-section {
+            margin-right: 50px;
+        }
+
+        .image-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Text Section */
+        .text-section {
+            text-align: left;
+            max-width: 400px;
+        }
+
+        .text-section h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Rotating Text */
+        .role {
+            font-size: 1.8rem;
+            font-weight: bold;
+            position: relative;
+            height: 2rem;
+            margin-top: 20px;
+            color: #607d8b;
+        }
+
+        .role span {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            animation: roleChange 8s linear infinite 0s;
+        }
+
+        .role span:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .role span:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        .role span:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        @keyframes roleChange {
+            0% { opacity: 0; transform: translateY(30px); }
+            10% { opacity: 1; transform: translateY(0); }
+            30% { opacity: 1; }
+            40% { opacity: 0; transform: translateY(-30px); }
+        }
+
+        /* Skills, Projects, Courses - Left and Right Combination */
+        .section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Social Media Icons */
+        .social {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social a {
+            margin: 0 10px;
+            color: #607d8b;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        .social a:hover {
+            color: #333;
+        }
+
+        /* Background Decorations */
+        .background-circle {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: move 25s linear infinite;
+        }
+
+        .background-circle:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            left: 30%;
+            animation-delay: 0s;
+        }
+
+        .background-circle:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            top: 60%;
+            left: 70%;
+            animation-delay: 5s;
+        }
+
+        .background-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 3s;
+        }
+
+        @keyframes move {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-50px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Section: Image and Text -->
+    <div class="main-container">
+        <div class="image-section">
+            <img src="https://via.placeholder.com/200" alt="Adarsh Pawade's Image">
+        </div>
+        <div class="text-section">
+            <h1>Adarsh Pawade</h1>
+            <div class="role">
+                <span>Student</span>
+                <span>Learner</span>
+                <span>Teacher</span>
+                <span>Software Developer</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+        <div>
+            <h2>My Skills</h2>
+            <ul>
+                <li>Great Communicator</li>
+                <li>Team Player</li>
+                <li>Hackathon Winner</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+        <div>
+            <h2>Projects</h2>
+            <ul>
+                <li>Student Management System</li>
+                <li>Flutter Application of Airport (Nanded)</li>
+                <li>Personal Portfolio to Showcase My Work</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="section">
+        <div>
+            <h2>Courses</h2>
+            <ul>
+                <li>C/C++ (Proficient)</li>
+                <li>Java</li>
+                <li>DSA</li>
+                <li>JavaScript, HTML, CSS</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social">
+        <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.github.com" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+
+    <!-- Font Awesome for Social Media Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

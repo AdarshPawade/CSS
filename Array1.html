@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> bhaskar pr3.2 css</title>
+        </head>
+    
+<body>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange"];
+
+        document.write("<h3>Original Array:</h3>");
+        document.write()
+
+        document.write("<h3>Array Length:</h3>");
+        document.write(fruits.length + "<br>");
+
+        fruits.push("Pineapple");
+        document.write("<h3>After Push (Adding 'Pineapple'):</h3>");
+        document.write(fruits.join(", ") + "<br>");
+
+        fruits.pop();
+        document.write("<h3>After Pop (Removing last element):</h3>");
+        document.write(fruits.join(", ") + "<br>");
+
+        fruits.unshift("Strawberry");
+        document.write("<h3>After Unshift (Adding 'Strawberry' at the beginning):</h3>");
+        document.write(fruits.join(", ") + "<br>");
+
+        fruits.shift();
+        document.write("<h3>After Shift (Removing the first element):</h3>");
+        document.write(fruits.join(", ") + "<br>");
+
+        let index = fruits.indexOf("Mango");
+        document.write("<h3>Index of 'Mango':</h3>");
+        document.write(index + "<br>");
+
+        fruits.splice(2, 1, "Kiwi", "Blueberry");
+        document.write("<h3>After Splice (Removing 'Cherry' and Adding 'Kiwi' and 'Blueberry'):</h3>");
+        document.write(fruits.join(", ") + "<br>");
+
+        let slicedFruits = fruits.slice(1, 4);
+        document.write("<h3>Sliced Array (from index 1 to 3):</h3>");
+        document.write(slicedFruits.join(", ") + "<br>");
+    </script>
+</body>
+</html>

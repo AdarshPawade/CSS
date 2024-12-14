@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Pawade's Cool Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            color: #333;
+            overflow-x: hidden;
+            padding: 50px 20px;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        /* Right Side for Image and Name */
+        .right-section {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            position: sticky;
+            top: 0;
+        }
+
+        .right-section img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .right-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .right-section h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .right-section h2 {
+            font-size: 1.5rem;
+            color: #ff9800;
+            margin-top: 10px;
+            animation: titleChange 8s infinite;
+        }
+
+        /* Rotating Titles */
+        @keyframes titleChange {
+            0%, 100% {
+                content: 'Student';
+                color: #cd159f;
+            }
+            33% {
+                content: 'Learner';
+                color: #ee1010;
+            }
+            66% {
+                content: 'Autodidact';
+                color: #0d31ea;
+            }
+        }
+
+        /* Left-Right Alternating Layout */
+        .left-right-section {
+            width: 55%;
+            margin-top: 50px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ad3f3f;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 1.2rem;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding-left: 10px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        ul li:hover {
+            color: #718855;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #7ca5ba;
+        }
+
+        /* Hover Effect for All Sections */
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        /* Social Media Links */
+        .social {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social a {
+            margin: 0 10px;
+            color: #2b82b1;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social a:hover {
+            color: #ff9800;
+        }
+
+        /* Background Gradient */
+        body {
+            background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .right-section {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .left-right-section {
+                width: 100%;
+            }
+
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Right Section: Image, Name, Rotating Titles -->
+        <div class="right-section">
+            <img src="C:\Users\HP\OneDrive\Desktop\Ada.jpg" alt="Adarsh Pawade's Image">
+            <h1>Adarsh Pawade</h1>
+            <h2 id="title">Student</h2>
+        </div>
+
+        <!-- Left-Right Alternating Content Sections -->
+        <div class="left-right-section">
+            <!-- Skills Section -->
+            <div class="section">
+                <div>
+                    <h2>My Skills</h2>
+                    <ul>
+                        <li>Great Communicator</li>
+                        <li>Team Player</li>
+                        <li>Hackathon Winner</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section">
+                <div>
+                    <h2>Projects</h2>
+                    <ul>
+                        <li>Student Management System</li>
+                        <li>Flutter Application of Airport (Nanded)</li>
+                        <li>Personal Portfolio to Showcase My Work</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Courses Section -->
+            <div class="section">
+                <div>
+                    <h2>Courses</h2>
+                    <ul>
+                        <li>C/C++ (Proficient)</li>
+                        <li>Java</li>
+                        <li>DSA</li>
+                        <li>JavaScript, HTML, CSS</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+    <!-- Font Awesome for Social Media Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript to Rotate Titles -->
+    <script>
+        const titles = ['Student', 'Learner', 'Autodidact'];
+        let currentTitle = 0;
+
+        setInterval(() => {
+            document.getElementById('title').textContent = titles[currentTitle];
+            currentTitle = (currentTitle + 1) % titles.length;
+        }, 2000);
+    </script>
+
+</body>
+</html>

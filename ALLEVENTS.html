@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form with All Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        form {
+            margin: 20px;
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        function onFocusFunc(element) {
+            element.style.backgroundColor = "#e0ffff";
+        }
+
+        function onBlurFunc(element) {
+            element.style.backgroundColor = "";
+        }
+
+        function onChangeFunc(event) {
+            alert("You changed the value to: " + event.target.value);
+        }
+
+        function onInputFunc(event) {
+            document.getElementById('output').innerText = event.target.value;
+        }
+
+        function onKeyUpFunc(event) {
+            console.log("Key up: " + event.key);
+        }
+
+        function onKeyPressFunc(event) {
+            console.log("Key pressed: " + event.key);
+        }
+
+        function onSubmitFunc(event) {
+            event.preventDefault(); // prevent form submission for demo purposes
+            alert("Form submitted!");
+        }
+
+        function onResetFunc() {
+            alert("Form reset!");
+        }
+
+        function onSelectFunc() {
+            alert("Text selected!");
+        }
+
+        function onCheckboxChange(event) {
+            if (event.target.checked) {
+                alert("Checkbox checked!");
+            } else {
+                alert("Checkbox unchecked!");
+            }
+        }
+
+        function onRadioChange(event) {
+            alert("Radio selected: " + event.target.value);
+        }
+
+        function onFileChange(event) {
+            const file = event.target.files[0];
+            if (file) {
+                alert("Selected file: " + file.name);
+            }
+        }
+
+        function onMouseOverFunc(event) {
+            event.target.style.backgroundColor = "#add8e6";
+        }
+
+        function onMouseOutFunc(event) {
+            event.target.style.backgroundColor = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>HTML Form with All Events</h1>
+
+    <form onsubmit="onSubmitFunc(event)" onreset="onResetFunc()">
+        <!-- Text input field -->
+        <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" onfocus="onFocusFunc(this)" onblur="onBlurFunc(this)" onchange="onChangeFunc(event)" onkeyup="onKeyUpFunc(event)" onkeypress="onKeyPressFunc(event)">
+        </div>
+
+        <!-- Password input field -->
+        <div class="form-field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" onfocus="onFocusFunc(this)" onblur="onBlurFunc(this)" onkeyup="onKeyUpFunc(event)">
+        </div>
+
+        <!-- Email input field -->
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" onfocus="onFocusFunc(this)" onblur="onBlurFunc(this)" oninput="onInputFunc(event)">
+        </div>
+
+        <!-- Select dropdown -->
+        <div class="form-field">
+            <label for="country">Country:</label>
+            <select id="country" name="country" onchange="onChangeFunc(event)">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+            </select>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-field">
+            <label for="subscribe">Subscribe:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" onchange="onCheckboxChange(event)">
+        </div>
+
+        <!-- Radio buttons -->
+        <div class="form-field">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" onchange="onRadioChange(event)">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" onchange="onRadioChange(event)">
+            <label for="female">Female</label>
+        </div>
+
+        <!-- File input -->
+        <div class="form-field">
+            <label for="file">Upload a file:</label>
+            <input type="file" id="file" name="file" onchange="onFileChange(event)">
+        </div>
+
+        <!-- Textarea with select event -->
+        <div class="form-field">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" onselect="onSelectFunc()"></textarea>
+        </div>
+
+        <!-- Submit and Reset buttons -->
+        <div class="form-field">
+            <button type="submit" onmouseover="onMouseOverFunc(event)" onmouseout="onMouseOutFunc(event)">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <p>Live input output: <span id="output"></span></p>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lost and Found Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Lost and Found Portal</h1>
+  </header>
+  <main>
+    <section id="lost-items">
+      <h2>Lost Items</h2>
+      <ul id="lost-items-list">
+        <!-- lost items will be displayed here -->
+      </ul>
+    </section>
+    <section id="found-items">
+      <h2>Found Items</h2>
+      <ul id="found-items-list">
+        <!-- found items will be displayed here -->
+      </ul>
+    </section>
+    <section id="submit-item">
+      <h2>Submit an Item</h2>
+      <form id="submit-item-form">
+        <label for="item-name">Item Name:</label>
+        <input type="text" id="item-name" name="item-name"><br><br>
+        <label for="item-description">Item Description:</label>
+        <textarea id="item-description" name="item-description"></textarea><br><br>
+        <label for="item-type">Item Type:</label>
+        <select id="item-type" name="item-type">
+          <option value="lost">Lost</option>
+          <option value="found">Found</option>
+        </select><br><br>
+        <input type="submit" value="Submit Item">
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

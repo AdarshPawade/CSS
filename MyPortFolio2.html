@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Pawade's Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+            animation: bgAnimate 10s infinite alternate;
+            color: #333;
+        }
+
+        /* Animated Background */
+        @keyframes bgAnimate {
+            0% {
+                background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+            }
+            50% {
+                background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+            }
+            100% {
+                background: linear-gradient(135deg, #89fffd, #ef32d9);
+            }
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Image, Name, and Skills Section */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-section img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .profile-section h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .profile-section h2 {
+            font-size: 2rem;
+            color: #ff9800;
+            animation: skillChange 8s infinite;
+            text-decoration: underline;
+        }
+
+        /* Continuous Color Changing Skills */
+        @keyframes skillChange {
+            0%, 100% { color: #ff9800; }
+            33% { color: #2196f3; }
+            66% { color: #4caf50; }
+        }
+
+        /* Sections for Skills, Projects, Courses */
+        .section {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .section-content {
+            width: 50%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .section-content:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding-left: 10px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        ul li:hover {
+            color: #ff9800;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #607d8b;
+        }
+
+        /* Alternating Layout */
+        .section:nth-child(even) .section-content {
+            margin-left: auto;
+        }
+
+        .section:nth-child(odd) .section-content {
+            margin-right: auto;
+        }
+
+        /* Social Media Links */
+        .social {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social a:hover {
+            color: #ff9800;
+        }
+
+        /* Additional Info Section */
+        .info-section {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-content {
+                width: 80%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Profile Section: Image, Name, and Rotating Skills -->
+    <div class="profile-section">
+        <img src="https://via.placeholder.com/250" alt="Adarsh Pawade">
+        <h1>Adarsh Pawade</h1>
+        <h2 id="skills">Student</h2>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+        <div class="section-content">
+            <h2>My Skills</h2>
+            <ul>
+                <li>Great Communicator</li>
+                <li>Team Player</li>
+                <li>Hackathon Winner</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li>Student Management System</li>
+                <li>Flutter Application of Airport (Nanded)</li>
+                <li>Personal Portfolio to Showcase My Work</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="section">
+        <div class="section-content">
+            <h2>Courses</h2>
+            <ul>
+                <li>C/C++ (Proficient)</li>
+                <li>Java</li>
+                <li>DSA</li>
+                <li>JavaScript, HTML, CSS</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+    <!-- Additional Info Section -->
+    <div class="info-section">
+        <p>I am Adarsh Pawade, a passionate student, learner, and autodidact with a focus on continuous self-growth. 
+        From software development to teaching, I thrive on challenges and learning new technologies to keep my skills fresh and relevant.</p>
+    </div>
+
+    <!-- Font Awesome for Social Media Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for Rotating Skills -->
+    <script>
+        const skills = ['Student', 'Learner', 'Autodidact'];
+        let currentSkill = 0;
+
+        setInterval(() => {
+            document.getElementById('skills').textContent = skills[currentSkill];
+            currentSkill = (currentSkill + 1) % skills.length;
+        }, 2000);
+    </script>
+
+</body>
+</html>

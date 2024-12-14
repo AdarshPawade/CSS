@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <p id="demo"></p> 
+        <script>
+            class Student {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+            }
+
+            let s1 = new Student("A", 20);
+            let s2 = new Student("B", 30);
+
+            document.getElementById("demo").innerHTML = s1.name;
+        </script>
+    </body>
+</html>
